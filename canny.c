@@ -1,4 +1,4 @@
-#include <stdio.h> /* Marr-Hildreth.c (or marrh.c) */
+#include <stdio.h> 
 
 #include <math.h>
 
@@ -70,22 +70,11 @@ char ** argv; {
   fprintf(fo3, "%d %d\n", PICSIZE, PICSIZE);
   fprintf(fo3, "255\n");
   // Fix artifacts
-  /*for (i = 0; i < 15; i++) {
-    getc(fp1);
-  }*/
   fgets(throwaway, 80, fp1);
   fgets(throwaway, 80, fp1);
   fgets(throwaway, 80, fp1);
   if ( !( (throwaway[0]=='2') && (throwaway[1]=='5') && (throwaway[2]=='5')))
   fgets(throwaway, 80, fp1); 
-
-  /* argc--; argv++;
-  foobar = *argv;
-  fo2=fopen(foobar,"wb"); */
-
-  /* argc--; argv++;
-  foobar = *argv;
-  ZEROTOL = atof(foobar);*/
 
   mr = (int)(sig * 3);
   centx = (MAXMASK / 2);
